@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
             this.button4 = new System.Windows.Forms.Button();
             this.lstChatMessages = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -64,11 +65,11 @@ namespace WindowsFormsApp1
             this.groupBox1.Size = new System.Drawing.Size(552, 157);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Управление";
+            this.groupBox1.Text = "  ";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(222, 27);
+            this.button5.Location = new System.Drawing.Point(298, 27);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(128, 30);
             this.button5.TabIndex = 9;
@@ -78,12 +79,13 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(222, 63);
+            this.button3.Location = new System.Drawing.Point(298, 63);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 30);
             this.button3.TabIndex = 8;
             this.button3.Text = "Выйти из чата";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtServerPort
             // 
@@ -100,6 +102,7 @@ namespace WindowsFormsApp1
             this.txtServerIP.Name = "txtServerIP";
             this.txtServerIP.Size = new System.Drawing.Size(120, 22);
             this.txtServerIP.TabIndex = 6;
+            this.txtServerIP.Text = "192.168.0.13";
             // 
             // txtUserName
             // 
@@ -202,15 +205,28 @@ namespace WindowsFormsApp1
             this.label4.TabIndex = 0;
             this.label4.Text = "Отправка";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(495, 553);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 30);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Вернуться назад";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ChatClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 565);
+            this.ClientSize = new System.Drawing.Size(646, 586);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "ChatClientForm";
-            this.Text = "Сеть работает!";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Подлючение к серверу";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -237,6 +253,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.Button button1;
     }
 }
 
